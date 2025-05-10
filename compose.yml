@@ -49,3 +49,9 @@ volumes:
 networks:
   default:
     name: fullstack-app-network
+
+# To run this without using docker you have to do:
+# 1. build each image frontend/backend with environment variables parsed
+# 2. create volume if needed for database
+# 3. create network
+# 4. run each image binded to volume and network
