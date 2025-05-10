@@ -20,6 +20,7 @@ COPY --from=deps /app/node_modules ./node_modules
 
 COPY . .
 
+# Inject ENV Because Vite can't build dynamically (can't hotswap ENV on the fly)
 ENV VITE_BACKEND_URL=${VITE_BACKEND_URL}
 
 RUN npm run build
